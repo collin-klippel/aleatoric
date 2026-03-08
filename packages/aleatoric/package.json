@@ -1,0 +1,58 @@
+{
+  "name": "aleatoric",
+  "version": "0.1.0",
+  "description": "APIs for the creation of aleatoric music — chance operations, stochastic processes, and indeterminate composition",
+  "author": "Collin Klippel",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/collin-klippel/aleatoric.git",
+    "directory": "packages/aleatoric"
+  },
+  "homepage": "https://github.com/collin-klippel/aleatoric#readme",
+  "bugs": {
+    "url": "https://github.com/collin-klippel/aleatoric/issues"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/cjs/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "build:esm": "tsc --project tsconfig.esm.json",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "music",
+    "aleatoric",
+    "generative",
+    "composition",
+    "chance",
+    "stochastic",
+    "indeterminate",
+    "midi",
+    "algorithmic",
+    "john-cage",
+    "xenakis",
+    "markov",
+    "l-system",
+    "cellular-automata"
+  ]
+}

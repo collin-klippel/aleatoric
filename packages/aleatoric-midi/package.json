@@ -1,0 +1,65 @@
+{
+  "name": "aleatoric-midi",
+  "version": "0.1.0",
+  "description": "Node.js MIDI output and CLI for aleatoric — send generative music to hardware synths and DAWs",
+  "author": "Collin Klippel",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/collin-klippel/aleatoric.git",
+    "directory": "packages/aleatoric-midi"
+  },
+  "homepage": "https://github.com/collin-klippel/aleatoric#readme",
+  "bugs": {
+    "url": "https://github.com/collin-klippel/aleatoric/issues"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/cjs/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "bin": {
+    "aleatoric-midi": "./dist/esm/bin.js"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "build:esm": "tsc --project tsconfig.esm.json",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "music",
+    "aleatoric",
+    "midi",
+    "generative",
+    "cli",
+    "node",
+    "ableton",
+    "daw"
+  ],
+  "peerDependencies": {
+    "aleatoric": "^0.1.0"
+  },
+  "dependencies": {
+    "easymidi": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "aleatoric": "^0.1.0"
+  }
+}
