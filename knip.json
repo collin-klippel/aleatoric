@@ -1,0 +1,14 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "workspaces": {
+    ".": {
+      "entry": ["scripts/docs-dev-all.mjs"]
+    },
+    "packages/docs": {
+      "entry": ["index.html", "playground.html", "src/playground-main.tsx"]
+    },
+    "packages/playground": {
+      "entry": ["index.html"]
+    }
+  }
+}
