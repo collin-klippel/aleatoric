@@ -68,6 +68,32 @@ You may use **pnpm** instead; a root `[pnpm-workspace.yaml](pnpm-workspace.yaml)
 
 Per-workspace equivalents (from repo root): `npm run docs:dev -w aleatoric-docs`, `npm run docs:build -w aleatoric-docs`, `npm run dev -w aleatoric-playground` for the playground dev server.
 
+## Commit message conventions
+
+This repository enforces [Conventional Commits](https://www.conventionalcommits.org/) via `commitlint`. All commit messages must follow this format:
+
+```
+type(scope): subject
+```
+
+**Types:** `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
+
+**Scopes:** `aleatoric`, `docs`, `playground`, `ci`, `deps`, `repo`
+
+**Examples:**
+
+- `feat(aleatoric): add SeededRng support for deterministic generation`
+- `fix(docs): correct MidiPlayer example in homepage`
+- `docs(playground): update setup instructions`
+- `refactor(aleatoric): simplify scale normalization logic`
+- `test(aleatoric): add edge case coverage for gaussian distribution`
+- `chore(deps): upgrade TypeScript to 5.8`
+- `chore(ci): update GitHub Actions workflow`
+
+Subject line should be lowercase, imperative mood ("add" not "added"), and under 50 characters. If your commit needs more detail, add a blank line and then a body paragraph.
+
+The `commit-msg` hook (via Husky) will reject commits that don't follow this format.
+
 ## Running commands for one workspace
 
 For faster iteration you can target a single package:
