@@ -53,7 +53,7 @@ export default function AleatoricApp() {
                 or feed to MIDI/audio players.
               </p>
               <pre className="code-block open">
-                <code>{`npm install aleatoric`}</code>
+                <code>{`npm install aleatoric@beta`}</code>
               </pre>
               <h3>TypeScript</h3>
               <pre className="code-block open">
