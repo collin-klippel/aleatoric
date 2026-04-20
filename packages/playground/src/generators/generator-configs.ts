@@ -15,7 +15,6 @@ import {
   SCALE_TYPE_NAMES,
   Scale,
   type ScaleType,
-  SeededRng,
   Timeline,
 } from 'aleatoric';
 
