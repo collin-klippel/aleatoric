@@ -1,6 +1,7 @@
 import {
   buildMidiTransitionMatrix,
   CHANCE_METHODS,
+  DefaultRng,
   generateCellularAutomata,
   generateChanceOps,
   generateMarkovSequence,
@@ -468,7 +469,7 @@ export const GENERATORS: GeneratorConfig[] = [
         baseOctave: params.baseOctave as number,
         pitchMapping: 'scale',
         scale: makeScale(params.scale as string, 60),
-        rng: new SeededRng(params.seed as number),
+        rng: new DefaultRng(),
       });
       return applyVelocityRange(
         events,
