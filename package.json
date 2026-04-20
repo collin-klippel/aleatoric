@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "prepare": "husky",
+    "dev": "npm-run-all --parallel docs:dev playground:dev",
     "verify": "npm run lint && npm run knip && npm run typecheck && npm run test:coverage && npm run docs:build",
     "build": "npm run build --workspaces --if-present",
     "pretypecheck": "npm run build",
@@ -23,6 +24,7 @@
     "docs:dev": "npm run docs:dev -w aleatoric-docs",
     "docs:build": "npm run docs:build -w aleatoric-docs",
     "docs:preview": "npm run docs:preview -w aleatoric-docs",
+    "playground:dev": "npm run dev -w aleatoric-playground",
     "playground:build": "npm run build -w aleatoric-playground",
     "knip": "knip",
     "knip:fix": "knip --fix --format --no-progress",
@@ -39,6 +41,7 @@
     "husky": "^9.1.7",
     "knip": "^5.46.0",
     "lint-staged": "^16.4.0",
+    "npm-run-all": "^4.1.5",
     "typescript": "^5.7",
     "vitest": "^3.0"
   }

@@ -106,6 +106,8 @@ jobs:
 
       - name: Build playground
         run: npm run playground:build
+        env:
+          GITHUB_PAGES: true
 
       - name: Copy playground to docs dist
         run: cp -r packages/playground/dist packages/docs/dist/playground

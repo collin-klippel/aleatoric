@@ -7,7 +7,11 @@ export default function DocsChrome() {
         <span className="docs-product-brand">aleatoric</span>
         <a
           className="docs-product-nav-playground"
-          href={`${import.meta.env.BASE_URL}playground.html`}
+          href={
+            import.meta.env.DEV
+              ? 'http://localhost:5174/'
+              : '/aleatoric/playground/'
+          }
         >
           Tone playground
         </a>

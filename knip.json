@@ -5,7 +5,7 @@
       "entry": ["scripts/docs-dev-all.mjs"]
     },
     "packages/docs": {
-      "entry": ["index.html", "playground.html", "src/playground-main.tsx"]
+      "entry": ["index.html"]
     },
     "packages/playground": {
       "entry": ["index.html"]
