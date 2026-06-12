@@ -2,14 +2,19 @@
 
 A TypeScript toolkit for algorithmic and chance-based music composition — chance operations, stochastic processes, and indeterminate composition in the tradition of John Cage, Iannis Xenakis, and Karlheinz Stockhausen.
 
+## Docs & Playground
+
+- **[Documentation](https://collin-klippel.github.io/aleatoric)** — interactive API reference and examples
+- **[Tone playground](https://collin-klippel.github.io/aleatoric/playground/)** — try generators and playback with Tone.js in the browser
+
 ## Packages
 
 
 | Package                                         | Description                                                                                                |
 | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | `[aleatoric](./packages/aleatoric)`             | Core music primitives, chance engine, generators, and MIDI player — runs anywhere (Node.js, browser, edge) |
-| `[aleatoric-docs](./packages/docs)`             | Interactive Vite docs site                                                                                 |
-| `[aleatoric-playground](./packages/playground)` | Private Vite + React sandbox (Tone.js) for experimenting with the core library — not published to npm      |
+| `[aleatoric-docs](./packages/docs)`             | [Interactive docs site](https://collin-klippel.github.io/aleatoric)                                      |
+| `[aleatoric-playground](./packages/playground)` | [Tone.js playground](https://collin-klippel.github.io/aleatoric/playground/) — not published to npm      |
 
 
 ## Install
@@ -136,7 +141,7 @@ const scheduler = new SynthesisScheduler(adapter, new Timeline(events), {
 scheduler.play();
 ```
 
-See the [playground](./packages/playground) for an interactive example. For complete API details, see the [core package README](./packages/aleatoric). From the repo root, run `npm run docs:dev` for the interactive docs app (`[packages/docs](./packages/docs)`).
+See the [documentation](https://collin-klippel.github.io/aleatoric) for the full API reference and the [Tone playground](https://collin-klippel.github.io/aleatoric/playground/) for an interactive demo. For local development, run `npm run docs:dev` ([`packages/docs`](./packages/docs)) or `npm run dev -w aleatoric-playground` ([`packages/playground`](./packages/playground)).
 
 ## Development
 

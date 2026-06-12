@@ -5,6 +5,8 @@ Core TypeScript library for algorithmic and chance-based music composition — p
 [![npm version](https://img.shields.io/npm/v/aleatoric.svg)](https://www.npmjs.com/package/aleatoric)
 [![license](https://img.shields.io/npm/l/aleatoric.svg)](../../LICENSE)
 
+**[Docs](https://collin-klippel.github.io/aleatoric)** · **[Playground](https://collin-klippel.github.io/aleatoric/playground/)**
+
 ## Features
 
 - **Core music primitives** — pitches, scales, chords, intervals, rhythms
@@ -337,13 +339,16 @@ const events = generateRandomPitches({ count: 8, rng: new SeededRng(1234) });
 // Always produces the same sequence
 ```
 
-## Interactive docs
+## Docs & Playground
 
-Run `npm run docs:dev` from the repo root for the interactive docs app ([`packages/docs`](../docs)).
+- **[Documentation](https://collin-klippel.github.io/aleatoric)** — interactive API reference
+- **[Tone playground](https://collin-klippel.github.io/aleatoric/playground/)** — browser demo with Tone.js
+
+To run locally from the repo root:
 
 ```bash
 npm run docs:dev
-npm run docs:build -w aleatoric-docs
+npm run dev -w aleatoric-playground
 ```
 
 See [Contributing](../../CONTRIBUTING.md) for all docs commands.
